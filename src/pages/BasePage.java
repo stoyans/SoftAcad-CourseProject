@@ -12,7 +12,7 @@ public class BasePage
     {
 
         this.driver = driver;
-        this.wait = new WebDriverWait(this.driver, 30);
+        this.wait = new WebDriverWait(this.driver, 15);
     }
     
     public WebDriver Driver()

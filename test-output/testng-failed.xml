@@ -5,9 +5,9 @@
     <classes>
       <class name="registrationTests.NegativeCases">
         <methods>
-          <include name="RegisterWithMissingFirstName"/>
           <include name="initDriver"/>
           <include name="quitSession"/>
+          <include name="RegisterWithMissingPassword"/>
         </methods>
       </class> <!-- registrationTests.NegativeCases -->
     </classes>

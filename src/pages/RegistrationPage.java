@@ -1,8 +1,5 @@
 package pages;
-
-import java.util.Iterator;
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -35,8 +32,11 @@ public class RegistrationPage extends BasePage
 	@FindBy(id = "stenik_user_registration_plainPassword_second")
 	public WebElement passwordConfirm;
 
-	// @FindBy(className = "stenik-radio")
-	// public WebElement[] genderOptions;
+	@FindBy(xpath = ".//*[@id='register_form']/div[6]/div[1]/div/label")
+	public WebElement genderMale;
+	
+	@FindBy(xpath = ".//*[@id='register_form']/div[6]/div[2]/div/label")
+	public WebElement genderFemale;
 
 	@FindBy(id = "stenik_user_registration_dateOfBirth")
 	public WebElement dateOfBirth;
@@ -47,11 +47,34 @@ public class RegistrationPage extends BasePage
 	@FindBy(id = "stenik_user_registration__submit")
 	public WebElement submit;
 
-	@FindBy(id = "register_message")
-	public WebElement errorMessageForInvalidDate;
-
+	@FindBy(xpath = ".//*[@id='register_form']/div[8]/div[1]/div[1]")
+	public WebElement selectCity;
 	
-
+	@FindBy(xpath = ".//*[@id='register_form']/div[9]/div[1]/div[1]")
+	public WebElement selectCinema;
+	
+	@FindBy(id = "register_message")
+	public WebElement errorMessageForInvalidData;
+	
+	@FindBy(xpath = ".//*[@id='register_form']/div[4]/div")
+	public WebElement errorMessageForPassMismatch;
+	
+	@FindBy(xpath = ".//*[@id='register_form']/div[1]/div")
+	public WebElement errorMessageForFirstname;
+	
+	@FindBy(xpath = ".//*[@id='register_form']/div[2]/div")
+	public WebElement errorMessageForLastname;
+	
+	@FindBy(xpath = ".//*[@id='register_form']/div[3]/div")
+	public WebElement errorMessageForEmail;
+	
+	@FindBy(xpath = ".//*[@id='register_form']/div[4]/div")
+	public WebElement errorMessageForMissingPass;
+	
+	@FindBy(xpath = ".//*[@id='register_form']/div[7]/div")
+	public WebElement errorMessageForMissingBirthdate;
+	
+	
 	public RegistrationPage(WebDriver driver)
 	{
 		super(driver);
@@ -68,34 +91,52 @@ public class RegistrationPage extends BasePage
 		regButton.click();
 	}
 
-	public void FillRegistrationForm(RegUser userData)
+	public void FillRegistrationForm(RegUser userData) throws InterruptedException
 	{
-		List<WebElement> genderOptions = Driver().findElements(By.cssSelector("div.formItem.radio.big"));
 		Wait().until(ExpectedConditions.elementToBeClickable(firstName));
 		firstName.sendKeys(userData.getfName());
 		lastName.sendKeys(userData.getlName());
 		email.sendKeys(userData.getEmail());
 		password.sendKeys(userData.getPass());
 		passwordConfirm.sendKeys(userData.getConfirmPass());
-
-		ClickOnElements(genderOptions, userData.getGenderOptions());
+		selectGender(userData);
 		dateOfBirth.sendKeys(userData.getDateOfBirth());
+		selectCity.click();
+		Thread.sleep(2000);
+		List<WebElement> citiesAndCinemaOptions = Driver().findElements(By.cssSelector("div.formItem.select div.selectedHolder + div.dropdown > span"));
+		selectOption(citiesAndCinemaOptions, userData.getCity());
+		selectCinema.click();
+		Thread.sleep(2000);
+		selectOption(citiesAndCinemaOptions, userData.getCinema());
+		Thread.sleep(2000);
 		termsAndConditions.click();
 		submit.click();
-		Wait().until(ExpectedConditions.visibilityOf(errorMessageForInvalidDate));
+		Wait().until(ExpectedConditions.visibilityOf(errorMessageForInvalidData));
 	}
-
-	public void ClickOnElements(List<WebElement> genderOptions, Boolean[] options)
+	
+	public void selectGender(RegUser userData)
 	{
-		int i = 0;
-		for (WebElement genderOption : genderOptions)
+		if (userData.getIsMale() != null)
 		{
-			if (options[i])
+			if (userData.getIsMale())
 			{
-				genderOption.click();
+				genderMale.click();
 			}
-
-			i++;
+			else
+			{
+				genderFemale.click();
+			}
+		}
+	}
+	
+	public void selectOption(List<WebElement> options, String userOption)
+	{
+		for (WebElement webElement : options)
+		{
+			if (webElement.getText().equals(userOption))
+			{
+				webElement.click();
+			}
 		}
 	}
 }

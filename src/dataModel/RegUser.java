@@ -8,10 +8,12 @@ public class RegUser
 	private String pass;
 	private String confirmPass;
 	private String dateOfBirth;
-	private Boolean[] genderOptions;
+	private Boolean isMale;
+	private String city;
+	private String cinema;
 	
 	public RegUser(String fName, String lName, String email, String pass,
-			String confirmPass, String dateOfBirth, Boolean[] genderOptions)
+			String confirmPass, String dateOfBirth, String city, String cinema)
 	{
 		this.fName = fName;
 		this.lName = lName;
@@ -19,7 +21,16 @@ public class RegUser
 		this.pass = pass;
 		this.confirmPass = confirmPass;
 		this.dateOfBirth = dateOfBirth;
-		this.genderOptions = genderOptions;
+		this.city = city;
+		this.cinema = cinema;
+	}
+	
+	public RegUser(String fName, String lName, String email, String pass,
+			String confirmPass, String dateOfBirth, Boolean isMale, String city, String cinema)
+			
+	{
+		this(fName, lName, email, pass, confirmPass, dateOfBirth, city, cinema);
+		this.isMale = isMale;
 	}
 
 	public String getfName()
@@ -82,13 +93,33 @@ public class RegUser
 		this.dateOfBirth = dateOfBirth;
 	}
 
-	public Boolean[] getGenderOptions()
+	public Boolean getIsMale()
 	{
-		return genderOptions;
+		return isMale;
 	}
 
-	public void setGenderOptions(Boolean[] genderOptions)
+	public void setIsMale(Boolean isMale)
 	{
-		this.genderOptions = genderOptions;
+		this.isMale = isMale;
+	}
+
+	public String getCity()
+	{
+		return city;
+	}
+
+	public void setCity(String city)
+	{
+		this.city = city;
+	}
+
+	public String getCinema()
+	{
+		return cinema;
+	}
+
+	public void setCinema(String cinema)
+	{
+		this.cinema = cinema;
 	}
 }
