@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 6 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Tanis\AppData\Local\Temp\testng-eclipse--582569591\testng-customsuite.xml</span>
+                    <span>C:\Users\Tanis\AppData\Local\Temp\testng-eclipse-1020344112\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods, 1 failed,   5 passed</span>
+                    <span class="method-stats">6 methods, 6 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,44 +102,35 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="registrationTests.NegativeCases" hash-for-method="RegisterWithMissingPassword">RegisterWithMissingPassword</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
-                    </span>
-                    <div class="method-list-content passed suite-Default_suite">
-                      <span>
-                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="registrationTests.NegativeCases" hash-for-method="RegisterWithInvalidEmail">RegisterWithInvalidEmail</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="registrationTests.NegativeCases" hash-for-method="RegisterWithMissingEmail">RegisterWithMissingEmail</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="registrationTests.NegativeCases" hash-for-method="RegisterWithMissingFirstName">RegisterWithMissingFirstName</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="registrationTests.NegativeCases" hash-for-method="RegisterWithMissingLastName">RegisterWithMissingLastName</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="registrationTests.NegativeCases" hash-for-method="RegisterWithMissingPassword">RegisterWithMissingPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="registrationTests.NegativeCases" hash-for-method="RegisterWithMissingPaswordsMismatch">RegisterWithMissingPaswordsMismatch</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -159,17 +150,304 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="RegisterWithInvalidEmail">
+                  </a> <!-- RegisterWithInvalidEmail -->
+                  <span class="method-name">RegisterWithInvalidEmail</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Failed to decode response from marionette
+Build info: version: &apos;3.3.1&apos;, revision: &apos;5234b32&apos;, time: &apos;2017-03-10 09:04:52 -0800&apos;
+System info: host: &apos;TANIS-PC&apos;, ip: &apos;192.168.0.110&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Tanis\AppData\Local\Temp\rust_mozprofile.gDQT1ts5ka5I, rotatable=false, timeouts={implicit=0, page load=300000, script=30000}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=52.0.2, platformVersion=10.0, moz:processID=13920, browserName=firefox, platformName=windows_nt}]
+Session ID: 6b75765d-a489-484a-95a8-4981029f4efc
+*** Element info: {Using=xpath, value=.//*[@id=&apos;login_popup&apos;]/h4}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:99)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:43)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:480)
+	at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:898)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:208)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:204)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:654)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:647)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	at pages.RegistrationPage.NavigateTo(RegistrationPage.java:89)
+	at registrationTests.NegativeCases.RegisterWithInvalidEmail(NegativeCases.java:80)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="RegisterWithMissingEmail">
+                  </a> <!-- RegisterWithMissingEmail -->
+                  <span class="method-name">RegisterWithMissingEmail</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Tried to run command without establishing a connection
+Build info: version: &apos;3.3.1&apos;, revision: &apos;5234b32&apos;, time: &apos;2017-03-10 09:04:52 -0800&apos;
+System info: host: &apos;TANIS-PC&apos;, ip: &apos;192.168.0.110&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Tanis\AppData\Local\Temp\rust_mozprofile.gDQT1ts5ka5I, rotatable=false, timeouts={implicit=0, page load=300000, script=30000}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=52.0.2, platformVersion=10.0, moz:processID=13920, browserName=firefox, platformName=windows_nt}]
+Session ID: 6b75765d-a489-484a-95a8-4981029f4efc
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:99)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:43)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:325)
+	at pages.RegistrationPage.NavigateTo(RegistrationPage.java:86)
+	at registrationTests.NegativeCases.RegisterWithMissingEmail(NegativeCases.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="RegisterWithMissingFirstName">
+                  </a> <!-- RegisterWithMissingFirstName -->
+                  <span class="method-name">RegisterWithMissingFirstName</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Tried to run command without establishing a connection
+Build info: version: &apos;3.3.1&apos;, revision: &apos;5234b32&apos;, time: &apos;2017-03-10 09:04:52 -0800&apos;
+System info: host: &apos;TANIS-PC&apos;, ip: &apos;192.168.0.110&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Tanis\AppData\Local\Temp\rust_mozprofile.gDQT1ts5ka5I, rotatable=false, timeouts={implicit=0, page load=300000, script=30000}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=52.0.2, platformVersion=10.0, moz:processID=13920, browserName=firefox, platformName=windows_nt}]
+Session ID: 6b75765d-a489-484a-95a8-4981029f4efc
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:99)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:43)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:325)
+	at pages.RegistrationPage.NavigateTo(RegistrationPage.java:86)
+	at registrationTests.NegativeCases.RegisterWithMissingFirstName(NegativeCases.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="RegisterWithMissingLastName">
+                  </a> <!-- RegisterWithMissingLastName -->
+                  <span class="method-name">RegisterWithMissingLastName</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Tried to run command without establishing a connection
+Build info: version: &apos;3.3.1&apos;, revision: &apos;5234b32&apos;, time: &apos;2017-03-10 09:04:52 -0800&apos;
+System info: host: &apos;TANIS-PC&apos;, ip: &apos;192.168.0.110&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Tanis\AppData\Local\Temp\rust_mozprofile.gDQT1ts5ka5I, rotatable=false, timeouts={implicit=0, page load=300000, script=30000}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=52.0.2, platformVersion=10.0, moz:processID=13920, browserName=firefox, platformName=windows_nt}]
+Session ID: 6b75765d-a489-484a-95a8-4981029f4efc
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:99)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:43)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:325)
+	at pages.RegistrationPage.NavigateTo(RegistrationPage.java:86)
+	at registrationTests.NegativeCases.RegisterWithMissingLastName(NegativeCases.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="RegisterWithMissingPassword">
                   </a> <!-- RegisterWithMissingPassword -->
                   <span class="method-name">RegisterWithMissingPassword</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [form.password_mismatch] but found [Required fields are missing]
-	at org.testng.Assert.fail(Assert.java:93)
-	at org.testng.Assert.failNotEquals(Assert.java:512)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
-	at org.testng.Assert.assertEquals(Assert.java:115)
-	at org.testng.Assert.assertEquals(Assert.java:189)
-	at org.testng.Assert.assertEquals(Assert.java:199)
-	at registrationTests.NegativeCases.RegisterWithMissingPassword(NegativeCases.java:98)
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Tried to run command without establishing a connection
+Build info: version: &apos;3.3.1&apos;, revision: &apos;5234b32&apos;, time: &apos;2017-03-10 09:04:52 -0800&apos;
+System info: host: &apos;TANIS-PC&apos;, ip: &apos;192.168.0.110&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Tanis\AppData\Local\Temp\rust_mozprofile.gDQT1ts5ka5I, rotatable=false, timeouts={implicit=0, page load=300000, script=30000}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=52.0.2, platformVersion=10.0, moz:processID=13920, browserName=firefox, platformName=windows_nt}]
+Session ID: 6b75765d-a489-484a-95a8-4981029f4efc
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:99)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:43)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:325)
+	at pages.RegistrationPage.NavigateTo(RegistrationPage.java:86)
+	at registrationTests.NegativeCases.RegisterWithMissingPassword(NegativeCases.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="RegisterWithMissingPaswordsMismatch">
+                  </a> <!-- RegisterWithMissingPaswordsMismatch -->
+                  <span class="method-name">RegisterWithMissingPaswordsMismatch</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Tried to run command without establishing a connection
+Build info: version: &apos;3.3.1&apos;, revision: &apos;5234b32&apos;, time: &apos;2017-03-10 09:04:52 -0800&apos;
+System info: host: &apos;TANIS-PC&apos;, ip: &apos;192.168.0.110&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Tanis\AppData\Local\Temp\rust_mozprofile.gDQT1ts5ka5I, rotatable=false, timeouts={implicit=0, page load=300000, script=30000}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=52.0.2, platformVersion=10.0, moz:processID=13920, browserName=firefox, platformName=windows_nt}]
+Session ID: 6b75765d-a489-484a-95a8-4981029f4efc
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:99)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:43)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:325)
+	at pages.RegistrationPage.NavigateTo(RegistrationPage.java:86)
+	at registrationTests.NegativeCases.RegisterWithMissingPaswordsMismatch(NegativeCases.java:108)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -201,53 +479,10 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-failed -->
-          <div class="suite-Default_suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">registrationTests.NegativeCases</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="RegisterWithInvalidEmail">
-                  </a> <!-- RegisterWithInvalidEmail -->
-                  <span class="method-name">RegisterWithInvalidEmail</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="RegisterWithMissingEmail">
-                  </a> <!-- RegisterWithMissingEmail -->
-                  <span class="method-name">RegisterWithMissingEmail</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="RegisterWithMissingFirstName">
-                  </a> <!-- RegisterWithMissingFirstName -->
-                  <span class="method-name">RegisterWithMissingFirstName</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="RegisterWithMissingLastName">
-                  </a> <!-- RegisterWithMissingLastName -->
-                  <span class="method-name">RegisterWithMissingLastName</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="RegisterWithMissingPaswordsMismatch">
-                  </a> <!-- RegisterWithMissingPaswordsMismatch -->
-                  <span class="method-name">RegisterWithMissingPaswordsMismatch</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Tanis\AppData\Local\Temp\testng-eclipse--582569591\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Tanis\AppData\Local\Temp\testng-eclipse-1020344112\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -300,32 +535,32 @@ data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'RegisterWithInvalidEmail')
 data.setCell(0, 2, 'registrationTests.NegativeCases')
-data.setCell(0, 3, 27659);
+data.setCell(0, 3, 16047);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'RegisterWithMissingFirstName')
+data.setCell(1, 1, 'RegisterWithMissingPaswordsMismatch')
 data.setCell(1, 2, 'registrationTests.NegativeCases')
-data.setCell(1, 3, 24201);
+data.setCell(1, 3, 14);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'RegisterWithMissingEmail')
+data.setCell(2, 1, 'RegisterWithMissingFirstName')
 data.setCell(2, 2, 'registrationTests.NegativeCases')
-data.setCell(2, 3, 22950);
+data.setCell(2, 3, 13);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'RegisterWithMissingPaswordsMismatch')
+data.setCell(3, 1, 'RegisterWithMissingEmail')
 data.setCell(3, 2, 'registrationTests.NegativeCases')
-data.setCell(3, 3, 21886);
+data.setCell(3, 3, 12);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'RegisterWithMissingPassword')
 data.setCell(4, 2, 'registrationTests.NegativeCases')
-data.setCell(4, 3, 21392);
+data.setCell(4, 3, 10);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'RegisterWithMissingLastName')
 data.setCell(5, 2, 'registrationTests.NegativeCases')
-data.setCell(5, 3, 21308);
+data.setCell(5, 3, 8);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 16 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -357,34 +592,46 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">RegisterWithInvalidEmail</span>
-                <span class="method-start">8745 ms</span>
+                <span class="method-start">8456 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">RegisterWithMissingEmail</span>
-                <span class="method-start">36407 ms</span>
+                <span class="method-start">24511 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">RegisterWithMissingFirstName</span>
-                <span class="method-start">59361 ms</span>
+                <span class="method-start">24531 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">RegisterWithMissingLastName</span>
-                <span class="method-start">83565 ms</span>
+                <span class="method-start">24548 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">RegisterWithMissingPassword</span>
-                <span class="method-start">104876 ms</span>
+                <span class="method-start">24560 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">RegisterWithMissingPaswordsMismatch</span>
-                <span class="method-start">126274 ms</span>
+                <span class="method-start">24577 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">quitSession</span>
-                <span class="method-start">148161 ms</span>
+                <span class="method-start">24595 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

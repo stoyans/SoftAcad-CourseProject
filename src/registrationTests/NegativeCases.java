@@ -111,5 +111,19 @@ public class NegativeCases
 		Assert.assertEquals("form.password_mismatch", regPage.errorMessageForPassMismatch.getText());
 		Assert.assertEquals("Information not valid!", regPage.errorMessageForInvalidData.getText());
 	}
+	
+	@Test
+	public void RegisterWithMissingGenderOption() throws InterruptedException
+	{
+		RegUser userData = new RegUser(
+				"Ivan", "Ivanov", "mail@mail.com", 
+				"password", "password", "22.07.1983", "Добрич", "Kino Arena Mall Varna");
+		RegistrationPage regPage = new RegistrationPage(driver);
+		regPage.NavigateTo();
+		
+		regPage.FillRegistrationForm(userData);
+		//Assert.assertEquals("form.password_mismatch", regPage.errorMessageForPassMismatch.getText());
+		Assert.assertEquals("Information not valid!", regPage.errorMessageForInvalidData.getText());
+	}
 
 }

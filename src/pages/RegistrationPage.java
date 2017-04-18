@@ -84,10 +84,10 @@ public class RegistrationPage extends BasePage
 	public void NavigateTo() throws InterruptedException
 	{
 		Driver().get("https://www.kinoarena.com/en/");
-		Wait().until(ExpectedConditions.elementToBeClickable(login));
-		Thread.sleep(2000); /// ??? why doesn't work without it
+		Thread.sleep(1000); /// ??? why doesn't work without it
 		login.click();
-		Wait().until(ExpectedConditions.elementToBeClickable(regButton));
+		Wait().until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='login_popup']/h4")));
+		//Wait().until(ExpectedConditions.elementToBeClickable(regButton));
 		regButton.click();
 	}
 
@@ -102,13 +102,13 @@ public class RegistrationPage extends BasePage
 		selectGender(userData);
 		dateOfBirth.sendKeys(userData.getDateOfBirth());
 		selectCity.click();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		List<WebElement> citiesAndCinemaOptions = Driver().findElements(By.cssSelector("div.formItem.select div.selectedHolder + div.dropdown > span"));
 		selectOption(citiesAndCinemaOptions, userData.getCity());
 		selectCinema.click();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		selectOption(citiesAndCinemaOptions, userData.getCinema());
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		termsAndConditions.click();
 		submit.click();
 		Wait().until(ExpectedConditions.visibilityOf(errorMessageForInvalidData));

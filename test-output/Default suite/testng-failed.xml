@@ -5,6 +5,11 @@
     <classes>
       <class name="registrationTests.NegativeCases">
         <methods>
+          <include name="RegisterWithMissingEmail"/>
+          <include name="RegisterWithInvalidEmail"/>
+          <include name="RegisterWithMissingLastName"/>
+          <include name="RegisterWithMissingPaswordsMismatch"/>
+          <include name="RegisterWithMissingFirstName"/>
           <include name="initDriver"/>
           <include name="quitSession"/>
           <include name="RegisterWithMissingPassword"/>
