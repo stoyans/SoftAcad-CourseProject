@@ -1,9 +1,10 @@
 package pages;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class BasePage
+public abstract class BasePage
 {
 	private WebDriver driver;
     private WebDriverWait wait;
@@ -13,6 +14,7 @@ public class BasePage
 
         this.driver = driver;
         this.wait = new WebDriverWait(this.driver, 15);
+        PageFactory.initElements(driver, this);
     }
     
     public WebDriver Driver()

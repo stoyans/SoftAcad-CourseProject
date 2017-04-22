@@ -1,0 +1,10 @@
+<test name="NegativeRegistrationCases">  
+	<groups>    
+		<run>      
+			<include name="RegisterWithMissingPassword"/>    
+		</run>  
+	</groups>
+	<classes>    
+		<class name="registrationTests.NegativeRegistrationCases"/>  	
+	</classes>
+</test>

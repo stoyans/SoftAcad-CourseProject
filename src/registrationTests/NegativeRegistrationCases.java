@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import dataModel.RegUser;
 import pages.RegistrationPage;
 
-public class NegativeCases
+public class NegativeRegistrationCases
 {
 	WebDriver driver;
 	
@@ -38,8 +38,8 @@ public class NegativeCases
 		regPage.NavigateTo();
 		
 		regPage.FillRegistrationForm(userData);
-		Assert.assertEquals("Information not valid!", regPage.errorMessageForInvalidData.getText());
-		Assert.assertEquals("Required fields are missing", regPage.errorMessageForFirstname.getText());
+		Assert.assertEquals(regPage.errorMessageForInvalidData.getText(), "Information not valid!");
+		Assert.assertEquals(regPage.errorMessageForFirstname.getText(), "Required fields are missing");
 	}
 	
 	@Test
@@ -52,8 +52,8 @@ public class NegativeCases
 		regPage.NavigateTo();
 		
 		regPage.FillRegistrationForm(userData);
-		Assert.assertEquals("Information not valid!", regPage.errorMessageForInvalidData.getText());
-		Assert.assertEquals("Required fields are missing", regPage.errorMessageForLastname.getText());
+		Assert.assertEquals(regPage.errorMessageForInvalidData.getText(), "Information not valid!");
+		Assert.assertEquals(regPage.errorMessageForLastname.getText(), "Required fields are missing");
 	}
 	
 	@Test
@@ -61,13 +61,13 @@ public class NegativeCases
 	{
 		RegUser userData = new RegUser(
 				"Ivan", "Ivanov", "", 
-				"password", "password", "22.07.1983", false, "Варна", "Kino Arena Mall Varna");
+				"password", "password", "22.07.1983", false, "Пловдив", "Kino Arena Mall Varna");
 		RegistrationPage regPage = new RegistrationPage(driver);
 		regPage.NavigateTo();
 		
 		regPage.FillRegistrationForm(userData);
-		Assert.assertEquals("Information not valid!", regPage.errorMessageForInvalidData.getText());
-		Assert.assertEquals("Required fields are missing", regPage.errorMessageForEmail.getText());
+		Assert.assertEquals(regPage.errorMessageForInvalidData.getText(), "Information not valid!");
+		Assert.assertEquals(regPage.errorMessageForEmail.getText(), "Required fields are missing");
 	}
 	
 	@Test
@@ -75,13 +75,13 @@ public class NegativeCases
 	{
 		RegUser userData = new RegUser(
 				"Ivan", "Ivanov", "google.d", 
-				"password", "password", "22.07.1983", false, "Варна", "Kino Arena Mall Varna");
+				"password", "password", "22.07.1983", false, "Смолян", "Kino Arena Mall Varna");
 		RegistrationPage regPage = new RegistrationPage(driver);
 		regPage.NavigateTo();
 		
 		regPage.FillRegistrationForm(userData);
-		Assert.assertEquals("Information not valid!", regPage.errorMessageForInvalidData.getText());
-		Assert.assertEquals("This value is not a valid email address.", regPage.errorMessageForEmail.getText());
+		Assert.assertEquals(regPage.errorMessageForInvalidData.getText(), "Information not valid!");
+		Assert.assertEquals(regPage.errorMessageForEmail.getText(), "This value is not a valid email address.");
 	}
 	
 	@Test
@@ -89,17 +89,17 @@ public class NegativeCases
 	{
 		RegUser userData = new RegUser(
 				"Ivan", "Ivanov", "mail@mail.com", 
-				"", "password", "22.07.1983", false, "Варна", "Kino Arena Mall Varna");
+				"", "password", "22.07.1983", false, "Петрич", "Kino Arena Mall Varna");
 		RegistrationPage regPage = new RegistrationPage(driver);
 		regPage.NavigateTo();
 		
 		regPage.FillRegistrationForm(userData);
-		Assert.assertEquals("Information not valid!", regPage.errorMessageForInvalidData.getText());
-		Assert.assertEquals("Required fields are missing", regPage.errorMessageForMissingPass.getText());
+		Assert.assertEquals(regPage.errorMessageForInvalidData.getText(), "form.password_mismatch");
+		Assert.assertEquals(regPage.errorMessageForMissingPass.getText(), "Required fields are missing");
 	}
 	
 	@Test
-	public void RegisterWithMissingPaswordsMismatch() throws InterruptedException
+	public void RegisterWithMissingPasswordsMismatch() throws InterruptedException
 	{
 		RegUser userData = new RegUser(
 				"Ivan", "Ivanov", "mail@mail.com", 
@@ -108,22 +108,21 @@ public class NegativeCases
 		regPage.NavigateTo();
 		
 		regPage.FillRegistrationForm(userData);
-		Assert.assertEquals("form.password_mismatch", regPage.errorMessageForPassMismatch.getText());
-		Assert.assertEquals("Information not valid!", regPage.errorMessageForInvalidData.getText());
+		Assert.assertEquals(regPage.errorMessageForPassMismatch.getText(), "form.password_mismatch");
+		Assert.assertEquals(regPage.errorMessageForInvalidData.getText(), "Information not valid!");
 	}
 	
 	@Test
-	public void RegisterWithMissingGenderOption() throws InterruptedException
+	public void RegisterWithMissingPasswords() throws InterruptedException
 	{
 		RegUser userData = new RegUser(
-				"Ivan", "Ivanov", "mail@mail.com", 
-				"password", "password", "22.07.1983", "Добрич", "Kino Arena Mall Varna");
+				"Ivan", "Ivanov", "abv@mail.com", 
+				"", "", "22.07.1983", true, "Бургас", "Kino Arena Mall Varna");
 		RegistrationPage regPage = new RegistrationPage(driver);
 		regPage.NavigateTo();
 		
 		regPage.FillRegistrationForm(userData);
-		//Assert.assertEquals("form.password_mismatch", regPage.errorMessageForPassMismatch.getText());
-		Assert.assertEquals("Information not valid!", regPage.errorMessageForInvalidData.getText());
+		Assert.assertEquals(regPage.errorMessageForPassMismatch.getText(), "Required fields are missing");
+		Assert.assertEquals(regPage.errorMessageForInvalidData.getText(), "Information not valid!");
 	}
-
 }

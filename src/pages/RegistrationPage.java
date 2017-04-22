@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import dataModel.RegUser;
@@ -78,16 +77,15 @@ public class RegistrationPage extends BasePage
 	public RegistrationPage(WebDriver driver)
 	{
 		super(driver);
-		PageFactory.initElements(driver, this);
 	}
 
 	public void NavigateTo() throws InterruptedException
 	{
 		Driver().get("https://www.kinoarena.com/en/");
-		Thread.sleep(1000); /// ??? why doesn't work without it
+		Thread.sleep(2000);//doesn't work without it
+		Wait().until(ExpectedConditions.elementToBeClickable(login));
 		login.click();
-		Wait().until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='login_popup']/h4")));
-		//Wait().until(ExpectedConditions.elementToBeClickable(regButton));
+		Wait().until(ExpectedConditions.elementToBeClickable(regButton));
 		regButton.click();
 	}
 
@@ -102,13 +100,13 @@ public class RegistrationPage extends BasePage
 		selectGender(userData);
 		dateOfBirth.sendKeys(userData.getDateOfBirth());
 		selectCity.click();
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		List<WebElement> citiesAndCinemaOptions = Driver().findElements(By.cssSelector("div.formItem.select div.selectedHolder + div.dropdown > span"));
 		selectOption(citiesAndCinemaOptions, userData.getCity());
 		selectCinema.click();
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		selectOption(citiesAndCinemaOptions, userData.getCinema());
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		termsAndConditions.click();
 		submit.click();
 		Wait().until(ExpectedConditions.visibilityOf(errorMessageForInvalidData));
