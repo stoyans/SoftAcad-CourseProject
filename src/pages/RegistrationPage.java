@@ -1,12 +1,13 @@
 package pages;
 import java.util.List;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import dataModel.RegUser;
+import utils.Utils;
 
 public class RegistrationPage extends BasePage
 {
@@ -73,17 +74,22 @@ public class RegistrationPage extends BasePage
 	@FindBy(xpath = ".//*[@id='register_form']/div[7]/div")
 	public WebElement errorMessageForMissingBirthdate;
 	
+	@FindBy(xpath = ".//*[@id='footer']/div/div[1]/nav/ul/li[1]/a")
+	public WebElement aboutUs;
 	
-	public RegistrationPage(WebDriver driver)
+	
+	
+	public RegistrationPage(driver.Driver driver)
 	{
 		super(driver);
+		PageFactory.initElements(driver.getDriver(), this);
 	}
 
 	public void NavigateTo() throws InterruptedException
 	{
-		Driver().get("https://www.kinoarena.com/en/");
-		Thread.sleep(2000);//doesn't work without it
-		Wait().until(ExpectedConditions.elementToBeClickable(login));
+		Driver().loadURL("https://www.kinoarena.com/en/");
+		Thread.sleep(4000);//doesn't work without it
+		Wait().until(ExpectedConditions.elementToBeClickable(aboutUs));
 		login.click();
 		Wait().until(ExpectedConditions.elementToBeClickable(regButton));
 		regButton.click();
@@ -92,49 +98,21 @@ public class RegistrationPage extends BasePage
 	public void FillRegistrationForm(RegUser userData) throws InterruptedException
 	{
 		Wait().until(ExpectedConditions.elementToBeClickable(firstName));
+		Thread.sleep(500);
 		firstName.sendKeys(userData.getfName());
 		lastName.sendKeys(userData.getlName());
 		email.sendKeys(userData.getEmail());
 		password.sendKeys(userData.getPass());
 		passwordConfirm.sendKeys(userData.getConfirmPass());
-		selectGender(userData);
+		Utils.selectGender(userData, genderFemale, genderMale);
 		dateOfBirth.sendKeys(userData.getDateOfBirth());
 		selectCity.click();
-		Thread.sleep(500);
-		List<WebElement> citiesAndCinemaOptions = Driver().findElements(By.cssSelector("div.formItem.select div.selectedHolder + div.dropdown > span"));
-		selectOption(citiesAndCinemaOptions, userData.getCity());
+		List<WebElement> citiesAndCinemaOptions = Driver().getDriver().findElements(By.cssSelector("div.formItem.select div.selectedHolder + div.dropdown > span"));
+		Utils.selectOption(citiesAndCinemaOptions, userData.getCity());
 		selectCinema.click();
-		Thread.sleep(500);
-		selectOption(citiesAndCinemaOptions, userData.getCinema());
-		Thread.sleep(500);
+		Utils.selectOption(citiesAndCinemaOptions, userData.getCinema());
 		termsAndConditions.click();
 		submit.click();
 		Wait().until(ExpectedConditions.visibilityOf(errorMessageForInvalidData));
-	}
-	
-	public void selectGender(RegUser userData)
-	{
-		if (userData.getIsMale() != null)
-		{
-			if (userData.getIsMale())
-			{
-				genderMale.click();
-			}
-			else
-			{
-				genderFemale.click();
-			}
-		}
-	}
-	
-	public void selectOption(List<WebElement> options, String userOption)
-	{
-		for (WebElement webElement : options)
-		{
-			if (webElement.getText().equals(userOption))
-			{
-				webElement.click();
-			}
-		}
 	}
 }

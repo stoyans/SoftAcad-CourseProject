@@ -3,18 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="registrationTests.NegativeRegistrationCases">
+      <class name="Tests.LoginAndReserveCG">
         <methods>
-          <include name="RegisterWithMissingPasswordsMismatch"/>
+          <include name="ReserveTicket"/>
           <include name="quitSession"/>
+          <include name="VerifySuccessfulLogin"/>
           <include name="initDriver"/>
-          <include name="RegisterWithMissingLastName"/>
-          <include name="RegisterWithMissingPassword"/>
-          <include name="RegisterWithMissingEmail"/>
-          <include name="RegisterWithMissingPasswords"/>
-          <include name="RegisterWithMissingFirstName"/>
         </methods>
-      </class> <!-- registrationTests.NegativeRegistrationCases -->
+      </class> <!-- Tests.LoginAndReserveCG -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,25 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="6" total="7" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="34329" started-at="2017-04-20T20:25:29Z" finished-at="2017-04-20T20:26:03Z">
+  <suite name="Default suite" duration-ms="35412" started-at="2017-04-23T11:35:34Z" finished-at="2017-04-23T11:36:10Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="34329" started-at="2017-04-20T20:25:29Z" finished-at="2017-04-20T20:26:03Z">
-      <class name="registrationTests.NegativeRegistrationCases">
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:registrationTests.NegativeRegistrationCases@5d5eef3d]" name="initDriver" is-config="true" duration-ms="11998" started-at="2017-04-20T23:25:29Z" finished-at="2017-04-20T23:25:41Z">
+    <test name="Default test" duration-ms="35412" started-at="2017-04-23T11:35:34Z" finished-at="2017-04-23T11:36:10Z">
+      <class name="Tests.NegativeRegistrationCasesCG">
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:Tests.NegativeRegistrationCasesCG@9629756]" name="initDriver" is-config="true" duration-ms="6840" started-at="2017-04-23T14:35:35Z" finished-at="2017-04-23T14:35:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="RegisterWithMissingEmail()[pri:0, instance:registrationTests.NegativeRegistrationCases@5d5eef3d]" name="RegisterWithMissingEmail" duration-ms="20235" started-at="2017-04-20T23:25:41Z" finished-at="2017-04-20T23:26:01Z">
+        <test-method status="PASS" signature="RegisterWithMissingConfirmEmail()[pri:0, instance:Tests.NegativeRegistrationCasesCG@9629756]" name="RegisterWithMissingConfirmEmail" duration-ms="8713" started-at="2017-04-23T14:35:41Z" finished-at="2017-04-23T14:35:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisterWithMissingConfirmEmail -->
+        <test-method status="PASS" signature="RegisterWithMissingConfirmPassword()[pri:0, instance:Tests.NegativeRegistrationCasesCG@9629756]" name="RegisterWithMissingConfirmPassword" duration-ms="2649" started-at="2017-04-23T14:35:50Z" finished-at="2017-04-23T14:35:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisterWithMissingConfirmPassword -->
+        <test-method status="PASS" signature="RegisterWithMissingEmail()[pri:0, instance:Tests.NegativeRegistrationCasesCG@9629756]" name="RegisterWithMissingEmail" duration-ms="2593" started-at="2017-04-23T14:35:53Z" finished-at="2017-04-23T14:35:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RegisterWithMissingEmail -->
-        <test-method status="PASS" signature="quitSession()[pri:0, instance:registrationTests.NegativeRegistrationCases@5d5eef3d]" name="quitSession" is-config="true" duration-ms="2056" started-at="2017-04-20T23:26:01Z" finished-at="2017-04-20T23:26:03Z">
+        <test-method status="PASS" signature="RegisterWithMissingName()[pri:0, instance:Tests.NegativeRegistrationCasesCG@9629756]" name="RegisterWithMissingName" duration-ms="2614" started-at="2017-04-23T14:35:55Z" finished-at="2017-04-23T14:35:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisterWithMissingName -->
+        <test-method status="PASS" signature="RegisterWithMissingPassword()[pri:0, instance:Tests.NegativeRegistrationCasesCG@9629756]" name="RegisterWithMissingPassword" duration-ms="2788" started-at="2017-04-23T14:35:58Z" finished-at="2017-04-23T14:36:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisterWithMissingPassword -->
+        <test-method status="PASS" signature="RegisterWithMissingPhone()[pri:0, instance:Tests.NegativeRegistrationCasesCG@9629756]" name="RegisterWithMissingPhone" duration-ms="2785" started-at="2017-04-23T14:36:01Z" finished-at="2017-04-23T14:36:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisterWithMissingPhone -->
+        <test-method status="PASS" signature="RegisterWithMissingUsername()[pri:0, instance:Tests.NegativeRegistrationCasesCG@9629756]" name="RegisterWithMissingUsername" duration-ms="2589" started-at="2017-04-23T14:36:04Z" finished-at="2017-04-23T14:36:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisterWithMissingUsername -->
+        <test-method status="PASS" signature="RegisterWithPasswordsMismatch()[pri:0, instance:Tests.NegativeRegistrationCasesCG@9629756]" name="RegisterWithPasswordsMismatch" duration-ms="2972" started-at="2017-04-23T14:36:06Z" finished-at="2017-04-23T14:36:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisterWithPasswordsMismatch -->
+        <test-method status="PASS" signature="quitSession()[pri:0, instance:Tests.NegativeRegistrationCasesCG@9629756]" name="quitSession" is-config="true" duration-ms="829" started-at="2017-04-23T14:36:09Z" finished-at="2017-04-23T14:36:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitSession -->
-      </class> <!-- registrationTests.NegativeRegistrationCases -->
+      </class> <!-- Tests.NegativeRegistrationCasesCG -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

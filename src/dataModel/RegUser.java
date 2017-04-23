@@ -5,12 +5,15 @@ public class RegUser
 	private String fName;
 	private String lName;
 	private String email;
+	private String confirmEmail;
 	private String pass;
 	private String confirmPass;
 	private String dateOfBirth;
 	private Boolean isMale;
 	private String city;
 	private String cinema;
+	private String username;
+	private String phone;
 	
 	public RegUser(String fName, String lName, String email, String pass,
 			String confirmPass, String dateOfBirth, String city, String cinema)
@@ -31,6 +34,19 @@ public class RegUser
 	{
 		this(fName, lName, email, pass, confirmPass, dateOfBirth, city, cinema);
 		this.isMale = isMale;
+	}
+	
+	public RegUser(String fName, String username, String email, String confirmEmail, String pass,
+			String confirmPass, String phone)
+			
+	{
+		this.fName = fName;
+		this.username = username;
+		this.confirmEmail = confirmEmail;
+		this.phone = phone;
+		this.email = email;
+		this.pass = pass;
+		this.confirmPass = confirmPass;
 	}
 
 	public String getfName()
@@ -121,5 +137,35 @@ public class RegUser
 	public void setCinema(String cinema)
 	{
 		this.cinema = cinema;
+	}
+
+	public String getUsername()
+	{
+		return username;
+	}
+
+	public void setUsername(String username)
+	{
+		this.username = username;
+	}
+
+	public String getCofirmEmail()
+	{
+		return confirmEmail;
+	}
+
+	public void setCofirmEmail(String cofirmEmail)
+	{
+		this.confirmEmail = cofirmEmail;
+	}
+
+	public String getPhone()
+	{
+		return phone;
+	}
+
+	public void setPhone(String phone)
+	{
+		this.phone = phone;
 	}
 }
