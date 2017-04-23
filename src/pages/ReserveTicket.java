@@ -28,6 +28,9 @@ public class ReserveTicket extends BasePage
 	@FindBy(id = "buttonproceed")
 	public WebElement proceedButton;
 	
+	@FindBy(id = "bt_booknow")
+	public WebElement reserveButton;
+	
 	@FindBy(id = "ddl_Cinema")
 	public WebElement cinemaDropdown;
 	
@@ -59,10 +62,10 @@ public class ReserveTicket extends BasePage
 		Wait().until(ExpectedConditions.elementToBeClickable(continueButton));
 	}
 	
-	public void NavigateToDateTime() throws InterruptedException
+	public void NavigateToDateTime(String cinemaValue) throws InterruptedException
 	{
 		Select cinemas = new Select(cinemaDropdown);
-		cinemas.selectByValue("6jqmS1Mz7jI=");
+		cinemas.selectByValue(cinemaValue);
 		Driver().getDriver().manage().timeouts().implicitlyWait(500, TimeUnit.MILLISECONDS);
 		Select dates = new Select(dateDropdown);
 		dates.selectByValue("gEFL/3o86m7RGltJIHTWuA==");
@@ -73,5 +76,11 @@ public class ReserveTicket extends BasePage
 		plusButton.click();
 		continueButton.click();
 		Wait().until(ExpectedConditions.elementToBeClickable(proceedButton));
+	}
+	
+	public void NavigateToSummary() throws InterruptedException
+	{
+		proceedButton.click();
+		Wait().until(ExpectedConditions.elementToBeClickable(reserveButton));
 	}
 }
