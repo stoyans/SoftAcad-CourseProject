@@ -1,8 +1,9 @@
-package Tests;
+package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import dataModel.LoginUser;
 import driver.Driver;
@@ -17,31 +18,33 @@ public class LoginAndReserveCG
 	public void initDriver() 
 	{
 		driver.startDriver();
+		verifySuccessfulLogin();
 	}
 	
 	@AfterClass(alwaysRun = true)
 	public void quitSession()
 	{
-		//driver.getDriver().quit();
+		driver.getDriver().quit();
 	}
 	
-	@Test(groups = "Login")
-	public void VerifySuccessfulLogin()
+	public void verifySuccessfulLogin()
 	{
 		LoginPageCG loginPage = new LoginPageCG(driver);
 		LoginUser user = new LoginUser("fifcb@abv.bg", "passwordfifcb", "username");
 		loginPage.navigateToLogIn(user);
-		
-		Assert.assertEquals(loginPage.welcomeUser.getText().trim(), user.getUsername());
 	}
 	
-	@Test(dependsOnGroups = "Login")
-	public void ReserveTicket() throws InterruptedException
+	@Parameters("cinemaName")
+	@Test
+	public void ReserveTicket(String cinemaName) throws InterruptedException
 	{
 		ReserveTicket ticketReservation = new ReserveTicket(driver);
 		ticketReservation.NavigateToBuyNow();
 		Assert.assertEquals(ticketReservation.continueButton.getText().trim(), "Продължи");
-		ticketReservation.NavigateToDateTime();
+		ticketReservation.NavigateToDateTime(cinemaName);
 		Assert.assertEquals(ticketReservation.proceedButton.getText().trim(), "Продължи");
+		ticketReservation.NavigateToSummary();
+		Assert.assertEquals(ticketReservation.reserveButton.getAttribute("value"), "резервирай сега");
 	}
+	
 }

@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Tests.LoginAndReserveCG">
+      <class name="tests.LoginAndReserveCG">
         <methods>
           <include name="ReserveTicket"/>
           <include name="quitSession"/>
-          <include name="VerifySuccessfulLogin"/>
           <include name="initDriver"/>
         </methods>
-      </class> <!-- Tests.LoginAndReserveCG -->
+      </class> <!-- tests.LoginAndReserveCG -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

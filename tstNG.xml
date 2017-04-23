@@ -1,10 +1,9 @@
-<test name="NegativeRegistrationCases">  
-	<groups>    
-		<run>      
-			<include name="RegisterWithMissingPassword"/>    
-		</run>  
-	</groups>
-	<classes>    
-		<class name="registrationTests.NegativeRegistrationCases"/>  	
-	</classes>
-</test>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="LoginAndReserveCG">
+	<test name="ReserveTicket">
+	<parameter name="cinemaName" value="6jqmS1Mz7jI="/>
+		<classes>
+			<class name="tests.LoginAndReserveCG" />
+		</classes>
+	</test>
+</suite>

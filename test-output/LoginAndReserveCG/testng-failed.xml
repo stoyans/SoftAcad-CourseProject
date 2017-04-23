@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [LoginAndReserveCG]">
+  <test name="ReserveTicket(failed)">
+    <parameter name="cinemaName" value="                                                                             SOFIA RING MALL"/>
+    <classes>
+      <class name="tests.LoginAndReserveCG">
+        <methods>
+          <include name="ReserveTicket" invocation-numbers="0"/>
+          <include name="quitSession"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- tests.LoginAndReserveCG -->
+    </classes>
+  </test> <!-- ReserveTicket(failed) -->
+</suite> <!-- Failed suite [LoginAndReserveCG] -->
