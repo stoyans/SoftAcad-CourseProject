@@ -1,23 +1,27 @@
 package pages;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import driver.Driver;
 
 public abstract class BasePage
 {
-	private WebDriver driver;
+	private Driver driver;
     private WebDriverWait wait;
-    
-    public BasePage(WebDriver driver)
-    {
 
+	@FindBy(xpath = ".//*[@id='bannerdiv']/div")
+	public WebElement bannerClose;
+	
+	@FindBy(xpath = ".//*[@id='footer']/div/div[4]/a[2]")
+	public WebElement declaration;
+	
+    public BasePage(Driver driver)
+    {
         this.driver = driver;
-        this.wait = new WebDriverWait(this.driver, 15);
-        PageFactory.initElements(driver, this);
+        this.wait = new WebDriverWait(this.driver.getDriver(), 15);
     }
     
-    public WebDriver Driver()
+    public Driver Driver()
 	{
 		return driver;
 	}
